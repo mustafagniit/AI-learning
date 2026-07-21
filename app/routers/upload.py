@@ -23,7 +23,7 @@ os.makedirs(
 
 @router.post("/")
 async def upload_document(file: UploadFile= File(...)):
-    file_path = f"{UPLOAD_DIR}/ {file.filename}"
+    file_path = f"{UPLOAD_DIR}/{file.filename}"
 
     with open(
         file_path,

@@ -19,6 +19,9 @@ def store_chunks(chunks, filename):
                 f"{filename}_ {index}"
             ],
             documents=[
+                chunk
+            ],
+            embeddings=[
                 vector
             ],
             metadatas=[

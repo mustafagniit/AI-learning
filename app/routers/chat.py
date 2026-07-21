@@ -15,14 +15,13 @@ router  = APIRouter(
 
 client = OpenAI(
     api_key=os.getenv(
-        ""
+        "OPENAI_API_KEY"
     )
 )
 
 
 class CharRequest(BaseModel):
     question: str
-
 
 @router.post("/")
 def chat(request: CharRequest):
